@@ -1,0 +1,32 @@
+root = true
+
+# set default settings
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+# set styles settings
+[*.{sass,scss,css,styl}]
+indent_size = 2
+
+# set html settings
+[*.{html,vue,md,hbs,pug,blade.php}]
+indent_size = 2
+
+# set js settings
+[*.{ts,d.ts,js,json,mjs}]
+indent_size = 2
+
+# others
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.go]
+indent_style = tab
+
+[.{eslintrc}]
+indent_size = 2
