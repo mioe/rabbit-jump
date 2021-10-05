@@ -1,5 +1,5 @@
 {
-  "name": "hello-phaser",
+  "name": "rabbit-jump",
   "version": "0.0.0",
   "private": true,
   "engines": {
@@ -12,6 +12,9 @@
     "serve": "vite preview"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
     "typescript": "^4.3.2",
     "vite": "^2.6.0"
   }
