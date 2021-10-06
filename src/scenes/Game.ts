@@ -35,13 +35,13 @@ export default class Game extends Phaser.Scene {
     /* Следим за нажатием клавиш */
     this.cursors = this.input.keyboard.createCursorKeys()
 
-    this.load.image('platform', 'src/assets/textures/ground_cake.png')
+    this.load.image('platform', 'assets/textures/ground_cake.png')
 
-    this.load.image('bunny-stand', 'src/assets/textures/bunny2_stand.png')
-    this.load.image('bunny-jump', 'src/assets/textures/bunny2_jump.png')
-    this.load.audio('jump', 'src/assets/audio/phaseJump1.ogg')
+    this.load.image('bunny-stand', 'assets/textures/bunny2_stand.png')
+    this.load.image('bunny-jump', 'assets/textures/bunny2_jump.png')
+    this.load.audio('jump', 'assets/audio/phaseJump1.ogg')
 
-    this.load.image('carrot', 'src/assets/textures/carrot.png')
+    this.load.image('carrot', 'assets/textures/carrot.png')
   }
 
   create(): void {
