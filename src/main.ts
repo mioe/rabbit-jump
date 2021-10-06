@@ -3,10 +3,10 @@ import Game from './scenes/Game'
 
 export default new Phaser.Game({
   type: Phaser.AUTO,
-  width: 700,
-  height: 350,
+  width: 393,
+  height: 624,
   scene: Game,
-  transparent: true,
+  backgroundColor: '#f2c0c0',
   physics: {
     default: 'arcade',
     arcade: {
