@@ -42,6 +42,9 @@ export default class Game extends Phaser.Scene {
     this.load.audio('jump', 'assets/audio/phaseJump1.ogg')
 
     this.load.image('carrot', 'assets/textures/carrot.png')
+
+    this.load.image('arrow-left', 'assets/icons/MdiArrowLeftCircle.svg')
+    this.load.image('arrow-right', 'assets/icons/MdiArrowRightCircle.svg')
   }
 
   create(): void {
@@ -92,6 +95,32 @@ export default class Game extends Phaser.Scene {
 
     this.authorText = this.add.text(315 , 595, 'by mioe 2021', style)
       .setOrigin(0.5, 0)
+
+    this.add.image(40, 560, 'arrow-left')
+      .setName('left')
+      .setScrollFactor(0)
+      .setOrigin(0.5, 0)
+      .setInteractive()
+
+    this.add.image(350, 560, 'arrow-right')
+      .setName('right')
+      .setScrollFactor(0)
+      .setOrigin(0.5, 0)
+      .setInteractive()
+
+    this.input.on('gameobjectdown', (pointer: any, gameObject: any) => {
+      // console.log('🦕 gameobjectdown', pointer, gameObject)
+      gameObject.setTintFill(0xff0000, 0xffff00, 0xff0000, 0xff0000)
+      // @ts-ignore
+      this.cursors[gameObject.name].isDown = true
+    })
+    this.input.on('gameobjectup', (pointer: any, gameObject: any) => {
+      // console.log('🦕 gameobjectup', pointer, gameObject)
+      gameObject.clearTint()
+      // @ts-ignore
+      this.cursors[gameObject.name].isDown = false
+    })
+
 
     /* Инициализация объекта и правило что объект может стоять на платформе */
     this.carrots = this.physics.add.group({
